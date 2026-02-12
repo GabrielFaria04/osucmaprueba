@@ -100,22 +100,39 @@ document.addEventListener('DOMContentLoaded', () => {
         const cardCount = cards.length;
 
         function updateCarousel() {
-            const width = cards[0].clientWidth; // Get width dynamically
-            track.style.transform = `translateX(-${currentIndex * width}px)`;
+            // Recalculate width every time in case of resize using the container width
+            const containerWidth = document.querySelector('.carousel-container').clientWidth;
+
+            // Ensure cards take full width of container
+            cards.forEach(card => card.style.minWidth = `${containerWidth}px`);
+
+            track.style.transform = `translateX(-${currentIndex * containerWidth}px)`;
         }
 
         nextBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % cardCount; // Loop back to start
+            if (currentIndex < cardCount - 1) {
+                currentIndex++;
+            } else {
+                currentIndex = 0; // Loop back to start
+            }
             updateCarousel();
         });
 
         prevBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + cardCount) % cardCount; // Loop to end
+            if (currentIndex > 0) {
+                currentIndex--;
+            } else {
+                currentIndex = cardCount - 1; // Loop to end
+            }
             updateCarousel();
         });
 
-        // Handle window resize to adjust slide width
-        window.addEventListener('resize', updateCarousel);
+        // Initialize and handle window resize
+        updateCarousel();
+        window.addEventListener('resize', () => {
+            // Debounce slightly or just call update
+            updateCarousel();
+        });
     }
 
     // Add scroll animation classes if needed, or rely on CSS animations

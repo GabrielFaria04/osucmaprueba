@@ -412,9 +412,12 @@ footer i {
 }
 
 /* Carousel Styles */
+/* Carousel Styles */
 .about-carousel {
     position: relative;
     max-width: 600px;
+    width: 100%;
+    /* Ensure it takes full width up to max */
     margin: 2rem auto 0;
     overflow: hidden;
 }
@@ -424,16 +427,21 @@ footer i {
     border-radius: 10px;
     background-color: var(--white);
     box-shadow: var(--shadow);
+    width: 100%;
 }
 
 .carousel-track {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    width: 100%;
+    /* Track needs to be flexible */
 }
 
 .carousel-card {
+    /* min-width will be set by JS, but default to 100% */
     min-width: 100%;
-    padding: 3rem 2rem;
+    padding: 3rem 1rem;
+    /* Reduced side padding for mobile */
     text-align: center;
     box-sizing: border-box;
 }
