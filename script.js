@@ -48,13 +48,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            
+
             // Basic validation passed (HTML5 'required' attribute handles empty fields)
-            
+
             // Simulate form submission
             const submitBtn = contactForm.querySelector('button');
             const originalBtnText = submitBtn.textContent;
-            
+
             submitBtn.textContent = 'Enviando...';
             submitBtn.disabled = true;
 
@@ -62,11 +62,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 formStatus.textContent = '¡Gracias! Tu mensaje ha sido enviado correctamente.';
                 formStatus.style.color = 'green';
                 formStatus.style.marginTop = '1rem';
-                
+
                 contactForm.reset();
                 submitBtn.textContent = originalBtnText;
                 submitBtn.disabled = false;
-                
+
                 // Clear success message after 5 seconds
                 setTimeout(() => {
                     formStatus.textContent = '';
@@ -88,6 +88,35 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }, observerOptions);
+
+    // Founders Carousel Logic
+    const track = document.getElementById('foundersTrack');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    if (track && prevBtn && nextBtn) {
+        let currentIndex = 0;
+        const cards = document.querySelectorAll('.carousel-card');
+        const cardCount = cards.length;
+
+        function updateCarousel() {
+            const width = cards[0].clientWidth; // Get width dynamically
+            track.style.transform = `translateX(-${currentIndex * width}px)`;
+        }
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % cardCount; // Loop back to start
+            updateCarousel();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + cardCount) % cardCount; // Loop to end
+            updateCarousel();
+        });
+
+        // Handle window resize to adjust slide width
+        window.addEventListener('resize', updateCarousel);
+    }
 
     // Add scroll animation classes if needed, or rely on CSS animations
     // Currently using simple CSS animations on load for Hero, but could expand.
