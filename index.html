@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSUCMA - Organización Solidaria Unidas por el Cáncer de Mama</title>
+    <meta name="description" content="Fundación dedicada a la concientización, apoyo y lucha contra el cáncer de mama. Únete a nuestra causa.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-ribbon"></i> OSUCMA
+            </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#quienes-somos" class="nav-link">Quiénes Somos</a></li>
+                <li><a href="#mision" class="nav-link">Misión</a></li>
+                <li><a href="#donar" class="nav-link btn-donate">Donar</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Unidas por la Vida</h1>
+            <p>Juntas somos más fuertes en la lucha contra el cáncer de mama.</p>
+            <div class="hero-buttons">
+                <a href="#mision" class="btn btn-primary">Conócenos</a>
+                <a href="#contacto" class="btn btn-outline">Contáctanos</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="quienes-somos" class="section about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Quiénes Somos</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p><strong>OSUCMA</strong> (Organización Solidaria Unidas por el Cáncer de Mama) es una fundación nacida del compromiso y la esperanza. Nos dedicamos a brindar apoyo integral a las mujeres y familias afectadas por esta enfermedad.</p>
+                    <p>Creemos en la importancia de la detección temprana, el acompañamiento emocional y el acceso a la información veraz. Nuestra comunidad está formada por sobrevivientes, voluntarios y profesionales unidos por una misma causa.</p>
+                </div>
+                <div class="about-image">
+                    <!-- Placeholder for an image of the team or support group -->
+                    <div class="image-placeholder">
+                        <i class="fas fa-hands-helping"></i>
+                        <p>Apoyo y comunidad</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section id="mision" class="section mission">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestra Misión</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="icon-box">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>Concientizar</h3>
+                    <p>Difundir información vital sobre la prevención y la detección temprana del cáncer de mama en nuestra comunidad.</p>
+                </div>
+                <div class="card">
+                    <div class="icon-box">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Acompañar</h3>
+                    <p>Ofrecer un espacio de contención emocional y psicológica para pacientes y sus familias durante todo el proceso.</p>
+                </div>
+                <div class="card">
+                    <div class="icon-box">
+                        <i class="fas fa-hand-holding-medical"></i>
+                    </div>
+                    <h3>Apoyar</h3>
+                    <p>Facilitar el acceso a recursos médicos y orientación para asegurar que nadie enfrente esta lucha en soledad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donate/Get Involved Section -->
+    <section id="donar" class="section donate">
+        <div class="container">
+            <div class="donate-content">
+                <h2>Tu Ayuda Hace la Diferencia</h2>
+                <p>Tu contribución nos permite seguir brindando apoyo, realizando campañas de prevención y ayudando a quienes más lo necesitan.</p>
+                <a href="#contacto" class="btn btn-primary btn-large">¡Quiero Ayudar!</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="section contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contáctanos</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Estamos para escucharte</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Calle Falsa 123, Ciudad, País</p>
+                    <p><i class="fas fa-phone"></i> +123 456 7890</p>
+                    <p><i class="fas fa-envelope"></i> contacto@osucma.org</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Tu Nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Tu Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder="Tu Mensaje" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                    <p id="form-status"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2024 OSUCMA. Todos los derechos reservados.</p>
+            <p>Diseñado con <i class="fas fa-heart"></i> para la comunidad.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
