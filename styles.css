@@ -1,6 +1,7 @@
 /* CSS Variables for easy theming */
 :root {
-    --primary-color: #e91e63; /* Pink */
+    --primary-color: #e91e63;
+    /* Pink */
     --primary-dark: #c2185b;
     --primary-light: #f8bbd0;
     --secondary-color: #4a4a4a;
@@ -24,7 +25,9 @@ body {
     background-color: var(--white);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'Montserrat', sans-serif;
     color: var(--secondary-color);
 }
@@ -144,7 +147,8 @@ ul {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(233, 30, 99, 0.7), rgba(194, 24, 91, 0.8)), url('https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80'); /* Using a relevant placeholder image URL */
+    /* PARA CAMBIAR LA IMAGEN DE FONDO: Reemplaza la URL dentro de url('...') por la de tu imagen */
+    background: linear-gradient(rgba(233, 30, 99, 0.7), rgba(194, 24, 91, 0.8)), url('https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -153,7 +157,8 @@ ul {
     align-items: center;
     text-align: center;
     color: var(--white);
-    margin-top: 70px; /* Offset for fixed navbar */
+    margin-top: 70px;
+    /* Offset for fixed navbar */
 }
 
 .hero-content h1 {
@@ -276,7 +281,7 @@ ul {
 
 /* Donate Section */
 .donate {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -387,6 +392,7 @@ footer i {
         opacity: 0;
         transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -398,6 +404,7 @@ footer i {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -432,7 +439,7 @@ footer i {
         width: 100%;
         text-align: center;
         transition: 0.3s;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     .nav-menu.active {
