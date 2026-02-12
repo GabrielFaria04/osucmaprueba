@@ -453,7 +453,8 @@ footer i {
     width: 150px;
     /* Increased size */
     height: 150px;
-    background-color: var(--primary-light);
+    background-color: var(--white);
+    /* Changed to white to avoid pink borders if transparent */
     border-radius: 50%;
     margin: 0 auto 1.5rem;
     display: flex;
@@ -464,6 +465,8 @@ footer i {
     overflow: hidden;
     border: 5px solid var(--white);
     box-shadow: var(--shadow);
+    position: relative;
+    /* For stacking context */
 }
 
 .founder-img img {
