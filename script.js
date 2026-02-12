@@ -100,12 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const cardCount = cards.length;
 
         function updateCarousel() {
-            // Recalculate width every time in case of resize using the container width
-            const containerWidth = document.querySelector('.carousel-container').clientWidth;
-
-            // Ensure cards take full width of container
-            cards.forEach(card => card.style.minWidth = `${containerWidth}px`);
-
+            const containerWidth = document.querySelector('.carousel-container').offsetWidth;
             track.style.transform = `translateX(-${currentIndex * containerWidth}px)`;
         }
 

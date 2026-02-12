@@ -440,6 +440,9 @@ footer i {
 .carousel-card {
     /* min-width will be set by JS, but default to 100% */
     min-width: 100%;
+    width: 100%;
+    flex-shrink: 0;
+    /* CRITICAL: Prevents cards from squishing */
     padding: 3rem 1rem;
     /* Reduced side padding for mobile */
     text-align: center;
