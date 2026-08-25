@@ -91,30 +91,32 @@ document.addEventListener('DOMContentLoaded', () => {
         restartAuto();
     }
 
-    /* ---------- Gallery lightbox ---------- */
+    /* ---------- Gallery lightbox (only present on multimedia.html) ---------- */
     const lightbox = document.getElementById('lightbox');
     const lightboxContent = document.getElementById('lightboxContent');
     const lightboxClose = document.getElementById('lightboxClose');
 
-    document.querySelectorAll('.gallery-item').forEach(item => {
-        item.addEventListener('click', () => {
-            const type = item.dataset.type;
-            const src = item.dataset.src;
-            lightboxContent.innerHTML = type === 'video'
-                ? `<video src="${src}" controls autoplay playsinline></video>`
-                : `<img src="${src}" alt="">`;
-            lightbox.classList.add('active');
+    if (lightbox && lightboxContent && lightboxClose) {
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const type = item.dataset.type;
+                const src = item.dataset.src;
+                lightboxContent.innerHTML = type === 'video'
+                    ? `<video src="${src}" controls autoplay playsinline></video>`
+                    : `<img src="${src}" alt="">`;
+                lightbox.classList.add('active');
+            });
         });
-    });
 
-    function closeLightbox() {
-        lightbox.classList.remove('active');
-        lightboxContent.innerHTML = '';
+        const closeLightbox = () => {
+            lightbox.classList.remove('active');
+            lightboxContent.innerHTML = '';
+        };
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
     }
-
-    lightboxClose.addEventListener('click', closeLightbox);
-    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
 
     /* ---------- Gallery inline video preview autoplay on hover/viewport ---------- */
     document.querySelectorAll('.gallery-item[data-type="video"] video').forEach(video => {

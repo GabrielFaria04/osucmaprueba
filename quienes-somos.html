@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiénes Somos — OSUCMA</title>
+    <meta name="description"
+        content="Conocé a las fundadoras y profesionales de OSUCMA, la fundación que promueve la prevención y detección temprana del cáncer de mama en Paraná.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ============ NAVBAR ============ -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">OSUCMA</a>
+
+            <div class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="quienes-somos.html" class="nav-link active">Quiénes Somos</a></li>
+                <li><a href="multimedia.html" class="nav-link">Multimedia</a></li>
+                <li><a href="mision.html" class="nav-link">Misión</a></li>
+                <li><a href="desfile-rosa-2026.html" class="nav-link">Desfile Rosa 2026</a></li>
+                <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                <li><a href="donar.html" class="nav-link nav-donate">Donar</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ============ PAGE HERO ============ -->
+    <header class="page-hero">
+        <div class="hero-blob b1"></div>
+        <div class="hero-blob b2"></div>
+        <div class="container">
+            <p class="eyebrow">Quiénes somos</p>
+            <h1>Una fundación nacida del compromiso y la esperanza</h1>
+            <p>Pacientes, voluntarias y profesionales de la salud, unidas por una misma causa.</p>
+        </div>
+    </header>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="pad about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <p><strong>OSUCMA</strong> (Organización Solidaria Unidas por el Cáncer de Mama) brinda apoyo
+                        integral a las mujeres y familias afectadas por esta enfermedad.</p>
+                    <p>Creemos en la importancia de la detección temprana, el acompañamiento emocional y el acceso a
+                        información veraz. Nuestra comunidad está formada por pacientes, voluntarias y profesionales
+                        unidos por una misma causa.</p>
+                    <p>La detección temprana no cura el cáncer de mama, pero aumenta significativamente las
+                        probabilidades de un tratamiento exitoso. Por eso trabajamos todos los días para acercar esa
+                        información a más personas.</p>
+                    <div class="about-signature">"Nadie debería transitar esto sin una mano que la sostenga."</div>
+                </div>
+
+                <div class="carousel reveal reveal-delay-1">
+                    <div class="carousel-viewport">
+                        <div class="carousel-track" id="foundersTrack">
+                            <div class="carousel-slide">
+                                <div class="founder-photo"><img src="assets/img/vale.jpg" alt="Valeria Lopez"
+                                        loading="lazy"></div>
+                                <h3>Valeria Lopez</h3>
+                                <p>Fundadora · Coordinadora RAWSON IMÁGENES · Coach Ontológico Profesional</p>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="founder-photo"><img src="assets/img/marti.jpg" alt="Martina Schaab"
+                                        loading="lazy"></div>
+                                <h3>Martina Schaab</h3>
+                                <p>Técnica Radióloga de RAWSON IMÁGENES</p>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="founder-photo"><img src="assets/img/flor.jpg" alt="Florencia Pecorari"
+                                        loading="lazy"></div>
+                                <h3>Florencia Pecorari</h3>
+                                <p>Lic. en Nutrición</p>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="founder-photo"><img src="assets/img/lore.jpg" alt="Lorena Poyanar"
+                                        loading="lazy"></div>
+                                <h3>Lorena Poyanar</h3>
+                                <p>Oncoestética y Autoimagen</p>
+                            </div>
+                            <div class="carousel-slide">
+                                <div class="founder-photo"><img src="assets/img/delfi.jpg" alt="Delfina Emeri"
+                                        loading="lazy"></div>
+                                <h3>Delfina Emeri</h3>
+                                <p>Lic. en Psicología</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-controls">
+                        <button class="carousel-btn" id="prevBtn" aria-label="Anterior"><i
+                                class="fas fa-chevron-left"></i></button>
+                        <div class="carousel-dots" id="carouselDots"></div>
+                        <button class="carousel-btn" id="nextBtn" aria-label="Siguiente"><i
+                                class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ EQUIPO EN ACCIÓN ============ -->
+    <section class="pad gallery-section" style="padding-top:0;">
+        <div class="container">
+            <div class="about-grid" style="align-items:center;">
+                <div class="reveal" style="border-radius:22px; overflow:hidden; box-shadow:var(--shadow-md);">
+                    <img src="assets/img/equipo.jpg" alt="Equipo de OSUCMA y RAWSON Imágenes" loading="lazy">
+                </div>
+                <div class="reveal reveal-delay-1">
+                    <p class="eyebrow">Nuestro equipo</p>
+                    <h2 style="font-size:clamp(1.9rem,3.6vw,2.6rem); margin-bottom:1.2rem;">Un equipo, una misma
+                        causa</h2>
+                    <p style="color:var(--ink-700); font-size:1.05rem; margin-bottom:1rem;">Detrás de cada campaña,
+                        charla y encuentro hay un equipo de profesionales y voluntarias comprometidas con acercar
+                        información y contención a quienes lo necesitan.</p>
+                    <a href="multimedia.html" class="btn btn-outline-dark">Ver más fotos y videos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">OSUCMA</div>
+                <ul class="footer-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+                    <li><a href="multimedia.html">Multimedia</a></li>
+                    <li><a href="mision.html">Misión</a></li>
+                    <li><a href="desfile-rosa-2026.html">Desfile Rosa 2026</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="donar.html">Donar</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 OSUCMA. Todos los derechos reservados.</p>
+                <p>Diseñado por <a href="#">Gabriel</a>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

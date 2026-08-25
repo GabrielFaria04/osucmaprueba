@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto — OSUCMA</title>
+    <meta name="description" content="Comunicate con OSUCMA en Paraná, Entre Ríos. Estamos para escucharte.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ============ NAVBAR ============ -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">OSUCMA</a>
+
+            <div class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="quienes-somos.html" class="nav-link">Quiénes Somos</a></li>
+                <li><a href="multimedia.html" class="nav-link">Multimedia</a></li>
+                <li><a href="mision.html" class="nav-link">Misión</a></li>
+                <li><a href="desfile-rosa-2026.html" class="nav-link">Desfile Rosa 2026</a></li>
+                <li><a href="contacto.html" class="nav-link active">Contacto</a></li>
+                <li><a href="donar.html" class="nav-link nav-donate">Donar</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ============ PAGE HERO ============ -->
+    <header class="page-hero">
+        <div class="hero-blob b1"></div>
+        <div class="hero-blob b2"></div>
+        <div class="container">
+            <p class="eyebrow">Contacto</p>
+            <h1>Estamos para escucharte</h1>
+        </div>
+    </header>
+
+    <!-- ============ CONTACTO ============ -->
+    <section class="pad contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <h3>Datos de contacto</h3>
+                    <div class="contact-row">
+                        <span class="ic"><i class="fas fa-map-marker-alt"></i></span>
+                        Hipólito Yrigoyen 365, Paraná, Entre Ríos, Argentina
+                    </div>
+                    <div class="contact-row">
+                        <span class="ic"><i class="fas fa-phone"></i></span>
+                        <a href="tel:+543434057010">+54 9 3434 05-7010</a>
+                    </div>
+                    <div class="contact-row">
+                        <span class="ic"><i class="fas fa-envelope"></i></span>
+                        <a href="mailto:info@rawsonimagenes.com.ar">info@rawsonimagenes.com.ar</a>
+                    </div>
+
+                    <div class="contact-map">
+                        <iframe
+                            src="https://www.google.com/maps?q=Hipolito+Yrigoyen+365,+Paran%C3%A1,+Entre+R%C3%ADos&output=embed"
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            title="Ubicación de OSUCMA"></iframe>
+                    </div>
+
+                    <div class="social-row">
+                        <a href="https://www.instagram.com/osucma/" target="_blank" rel="noopener"
+                            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/5493434057010" target="_blank" rel="noopener" aria-label="WhatsApp"><i
+                                class="fab fa-whatsapp"></i></a>
+                        <a href="https://facebook.com/osucma" target="_blank" rel="noopener"
+                            aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+                <form class="contact-form reveal reveal-delay-1" id="contactForm">
+                    <h3>Envianos un mensaje</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Tu nombre</label>
+                            <input type="text" id="name" name="name" placeholder="Nombre y apellido" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Tu email</label>
+                            <input type="email" id="email" name="email" placeholder="vos@email.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Contanos en qué podemos ayudarte"
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Enviar mensaje
+                    </button>
+                    <p id="form-status"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">OSUCMA</div>
+                <ul class="footer-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+                    <li><a href="multimedia.html">Multimedia</a></li>
+                    <li><a href="mision.html">Misión</a></li>
+                    <li><a href="desfile-rosa-2026.html">Desfile Rosa 2026</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="donar.html">Donar</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 OSUCMA. Todos los derechos reservados.</p>
+                <p>Diseñado por <a href="#">Gabriel</a>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

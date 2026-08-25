@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donar — OSUCMA</title>
+    <meta name="description"
+        content="Doná a OSUCMA vía Mercado Pago o transferencia y ayudanos a sostener talleres de prevención y acompañamiento gratuito en Paraná.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ============ NAVBAR ============ -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">OSUCMA</a>
+
+            <div class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="quienes-somos.html" class="nav-link">Quiénes Somos</a></li>
+                <li><a href="multimedia.html" class="nav-link">Multimedia</a></li>
+                <li><a href="mision.html" class="nav-link">Misión</a></li>
+                <li><a href="desfile-rosa-2026.html" class="nav-link">Desfile Rosa 2026</a></li>
+                <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                <li><a href="donar.html" class="nav-link nav-donate active">Donar</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ============ DONAR ============ -->
+    <section class="pad donate" style="padding-top:calc(var(--nav-h) + 5rem);">
+        <div class="container">
+            <div class="donate-grid">
+                <div class="donate-text reveal">
+                    <p class="eyebrow">Sumate a la causa</p>
+                    <h1>Tu ayuda hace la diferencia</h1>
+                    <p>Cada donación nos permite seguir brindando acompañamiento, realizando campañas de prevención y
+                        ayudando a quienes más lo necesitan en Paraná y la región.</p>
+                    <ul class="donate-list">
+                        <li><i class="fas fa-check-circle"></i> Talleres de concientización y detección temprana</li>
+                        <li><i class="fas fa-check-circle"></i> Contención emocional y psicológica gratuita</li>
+                        <li><i class="fas fa-check-circle"></i> Orientación y acompañamiento a pacientes</li>
+                    </ul>
+                </div>
+
+                <div class="donate-card reveal reveal-delay-1">
+                    <h3>Donar con Mercado Pago</h3>
+                    <p>Rápido, seguro y con el respaldo de Mercado Pago. Elegí el monto que quieras aportar.</p>
+                    <!-- Reemplazar por el link real de tu caja/link de pago de Mercado Pago -->
+                    <a href="https://link.mercadopago.com.ar/osucma" target="_blank" rel="noopener"
+                        class="btn btn-gold btn-lg">
+                        <i class="fas fa-hand-holding-heart"></i> Donar ahora
+                    </a>
+
+                    <div class="donate-alias">
+                        O transferí directamente a nuestro alias
+                        <strong id="aliasText">osucma.2026</strong>
+                        <button class="copy-btn" id="copyAliasBtn"><i class="fas fa-copy"></i> Copiar alias</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">OSUCMA</div>
+                <ul class="footer-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+                    <li><a href="multimedia.html">Multimedia</a></li>
+                    <li><a href="mision.html">Misión</a></li>
+                    <li><a href="desfile-rosa-2026.html">Desfile Rosa 2026</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="donar.html">Donar</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 OSUCMA. Todos los derechos reservados.</p>
+                <p>Diseñado por <a href="#">Gabriel</a>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
