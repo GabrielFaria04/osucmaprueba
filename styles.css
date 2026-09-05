@@ -368,6 +368,28 @@ body.menu-open .navbar .menu-toggle .bar { background: var(--ink-900); }
 .page-hero h1 { color: var(--white); font-size: clamp(2.1rem, 4.4vw, 3.2rem); }
 .page-hero p { margin-top: 1rem; color: rgba(255,255,255,0.8); font-size: 1.08rem; max-width: 620px; }
 
+/* Per-page photographic identity: a real photo washed under the same dark
+   gradient, so each interior page keeps its own visual memory instead of
+   repeating one identical block seven times. */
+.page-hero.ph-equipo    { background-image: radial-gradient(120% 100% at 15% 10%, rgba(92,45,74,0.87) 0%, rgba(58,22,38,0.92) 45%, rgba(30,12,23,0.96) 100%), url('assets/img/equipo.jpg'); background-size: cover; background-position: center 20%; }
+.page-hero.ph-comunidad1 { background-image: radial-gradient(120% 100% at 15% 10%, rgba(92,45,74,0.87) 0%, rgba(58,22,38,0.92) 45%, rgba(30,12,23,0.96) 100%), url('assets/img/comunidad1.jpg'); background-size: cover; background-position: center 30%; }
+.page-hero.ph-comunidad2 { background-image: radial-gradient(120% 100% at 15% 10%, rgba(92,45,74,0.87) 0%, rgba(58,22,38,0.92) 45%, rgba(30,12,23,0.96) 100%), url('assets/img/comunidad2.jpg'); background-size: cover; background-position: center 25%; }
+
+/* Desfile Rosa: the event's own tree illustration, tucked into the hero */
+.page-hero.ph-desfile { overflow: visible; }
+.page-hero .desfile-tree-mark {
+  position: absolute;
+  right: -40px;
+  bottom: -60px;
+  width: min(30vw, 340px);
+  opacity: 0.5;
+  z-index: -1;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.35));
+}
+@media (max-width: 768px) {
+  .page-hero .desfile-tree-mark { width: 180px; right: -30px; bottom: -30px; opacity: 0.35; }
+}
+
 /* Reveal animation, used across sections */
 .reveal {
   opacity: 0;
@@ -497,6 +519,57 @@ body.menu-open .navbar .menu-toggle .bar { background: var(--ink-900); }
 .carousel-dots button.active { width: 22px; border-radius: 4px; background: var(--rose-700); }
 
 /* ============================================================
+   Full-bleed statement — a signature moment that breaks the
+   eyebrow+card rhythm used everywhere else on the site
+   ============================================================ */
+.statement {
+  position: relative;
+  padding: 8rem 0;
+  background: linear-gradient(rgba(20,6,14,0.82), rgba(20,6,14,0.88)), url('assets/img/comunidad2.jpg');
+  background-size: cover;
+  background-position: center 20%;
+  background-attachment: fixed;
+  color: var(--white);
+  text-align: center;
+  overflow: hidden;
+}
+.statement blockquote {
+  position: relative;
+  max-width: 780px;
+  margin: 0 auto;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.7rem, 3.4vw, 2.6rem);
+  line-height: 1.35;
+  color: var(--white);
+}
+.statement blockquote::before {
+  content: '\201C';
+  display: block;
+  font-size: 5rem;
+  line-height: 1;
+  color: var(--gold-300);
+  opacity: 0.7;
+  margin-bottom: 0.5rem;
+  font-style: normal;
+}
+.statement cite {
+  display: block;
+  margin-top: 1.8rem;
+  font-family: var(--font-body);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold-300);
+}
+@media (max-width: 768px) {
+  .statement { background-attachment: scroll; padding: 6rem 0; }
+}
+
+/* ============================================================
    Multimedia gallery
    ============================================================ */
 .gallery-section { background: var(--rose-50); }
@@ -529,10 +602,39 @@ body.menu-open .navbar .menu-toggle .bar { background: var(--ink-900); }
 .gallery-item img, .gallery-item video {
   width: 100%; height: 100%;
   object-fit: cover;
-  transition: transform 0.6s var(--ease);
+  filter: saturate(0.88) contrast(1.02);
+  transition: transform 0.6s var(--ease), filter 0.6s var(--ease);
 }
 .gallery-item:hover img,
-.gallery-item:hover video { transform: scale(1.06); }
+.gallery-item:hover video { transform: scale(1.06); filter: saturate(1.15) contrast(1.05); }
+
+/* Scroll affordance: fade + arrow so a desktop mouse user notices there is
+   more to see sideways, not just touch/swipe users */
+.gallery-scroller-wrap { position: relative; }
+.gallery-scroller-wrap::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; bottom: 1.2rem;
+  width: 90px;
+  background: linear-gradient(90deg, transparent, var(--rose-50) 88%);
+  pointer-events: none;
+}
+.gallery-scroll-btn {
+  position: absolute;
+  top: 45%; right: 0.6rem;
+  transform: translateY(-50%);
+  width: 46px; height: 46px;
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--rose-700);
+  box-shadow: var(--shadow-md);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.05rem;
+  z-index: 2;
+  transition: 0.3s var(--ease);
+}
+.gallery-scroll-btn:hover { background: var(--rose-700); color: var(--white); }
+@media (max-width: 768px) { .gallery-scroll-btn { display: none; } }
 
 .gallery-caption {
   position: absolute;
@@ -651,8 +753,8 @@ body.menu-open .navbar .menu-toggle .bar { background: var(--ink-900); }
 }
 .teaser-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-md); }
 .teaser-card .teaser-img { height: 190px; overflow: hidden; }
-.teaser-card .teaser-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease); }
-.teaser-card:hover .teaser-img img { transform: scale(1.08); }
+.teaser-card .teaser-img img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.85) contrast(1.02); transition: transform 0.6s var(--ease), filter 0.6s var(--ease); }
+.teaser-card:hover .teaser-img img { transform: scale(1.08); filter: saturate(1.15) contrast(1.05); }
 .teaser-card .teaser-body { padding: 1.6rem 1.5rem 1.8rem; flex: 1; display: flex; flex-direction: column; }
 .teaser-card h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
 .teaser-card p { color: var(--ink-700); font-size: 0.95rem; flex: 1; }
@@ -785,6 +887,24 @@ body.menu-open .navbar .menu-toggle .bar { background: var(--ink-900); }
   font-size: 0.98rem;
 }
 .donate-list li i { color: var(--gold-300); }
+
+.donate-avatars {
+  margin-top: 2.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.donate-avatars-photos { display: flex; }
+.donate-avatars-photos img {
+  width: 46px; height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--rose-950);
+  margin-left: -14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+.donate-avatars-photos img:first-child { margin-left: 0; }
+.donate-avatars p { margin-top: 0; color: rgba(255,255,255,0.68); font-size: 0.9rem; font-style: italic; }
 
 .donate-card {
   background: rgba(255, 255, 255, 0.06);

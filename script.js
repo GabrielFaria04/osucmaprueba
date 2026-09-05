@@ -91,6 +91,22 @@ document.addEventListener('DOMContentLoaded', () => {
         restartAuto();
     }
 
+    /* ---------- Gallery scroll arrow (only present on multimedia.html) ---------- */
+    const galleryScroller = document.getElementById('galleryScroller');
+    const galleryScrollBtn = document.getElementById('galleryScrollBtn');
+    if (galleryScroller && galleryScrollBtn) {
+        galleryScrollBtn.addEventListener('click', () => {
+            galleryScroller.scrollBy({ left: 340, behavior: 'smooth' });
+        });
+        const updateScrollBtn = () => {
+            const atEnd = galleryScroller.scrollLeft + galleryScroller.clientWidth >= galleryScroller.scrollWidth - 10;
+            galleryScrollBtn.style.opacity = atEnd ? '0' : '1';
+            galleryScrollBtn.style.pointerEvents = atEnd ? 'none' : 'auto';
+        };
+        galleryScroller.addEventListener('scroll', updateScrollBtn, { passive: true });
+        updateScrollBtn();
+    }
+
     /* ---------- Gallery lightbox (only present on multimedia.html) ---------- */
     const lightbox = document.getElementById('lightbox');
     const lightboxContent = document.getElementById('lightboxContent');

@@ -23,7 +23,7 @@
     <!-- ============ NAVBAR ============ -->
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
-            <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="OSUCMA" class="logo-img"></a>
+            <a href="index.html" class="logo"><img src="assets/img/logo-icon.png" alt="OSUCMA" class="logo-img"></a>
 
             <div class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
                 <span class="bar"></span>
@@ -44,7 +44,7 @@
     </nav>
 
     <!-- ============ PAGE HERO ============ -->
-    <header class="page-hero">
+    <header class="page-hero ph-comunidad2">
         <div class="hero-blob b1"></div>
         <div class="hero-blob b2"></div>
         <div class="container">
@@ -58,6 +58,7 @@
     <!-- ============ GALERÍA ============ -->
     <section class="pad gallery-section">
         <div class="container">
+            <div class="gallery-scroller-wrap">
             <div class="gallery-scroller reveal" id="galleryScroller">
                 <div class="gallery-item tall" data-type="video" data-src="assets/video/institucional.mp4">
                     <video src="assets/video/institucional.mp4" muted loop playsinline preload="metadata"
@@ -83,6 +84,10 @@
                     <div class="gallery-caption">Nuestro equipo</div>
                 </div>
             </div>
+            <button class="gallery-scroll-btn" id="galleryScrollBtn" aria-label="Ver más elementos de la galería">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            </div>
         </div>
     </section>
 
@@ -90,7 +95,7 @@
     <footer>
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-brand"><img src="assets/img/logo.png" alt="OSUCMA"></div>
+                <div class="footer-brand"><img src="assets/img/logo-icon.png" alt="OSUCMA"></div>
                 <ul class="footer-links">
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="quienes-somos.html">Quiénes Somos</a></li>
